@@ -1,0 +1,18 @@
+import { NextResponse } from 'next/server';
+
+/**
+ * Next.js proxy entrypoint.
+ *
+ * The renewed source runs without authentication, so this proxy is a no-op.
+ */
+export default function proxy() {
+  return NextResponse.next();
+}
+export const config = {
+  matcher: [
+    // Skip Next.js internals and all static files, unless found in search params
+    '/((?!_next|[^?]*\\.(?:html?|css|js(?!on)|jpe?g|webp|png|gif|svg|ttf|woff2?|ico|csv|docx?|xlsx?|zip|webmanifest)).*)',
+    // Always run for API routes
+    '/(api|trpc)(.*)'
+  ]
+};
