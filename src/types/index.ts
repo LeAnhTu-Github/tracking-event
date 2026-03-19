@@ -13,6 +13,10 @@ export interface NavItem {
   url: string;
   disabled?: boolean;
   external?: boolean;
+  /**
+   * Optional group used to organize sidebar sections (e.g. "overview", "system").
+   */
+  group?: 'overview' | 'system';
   shortcut?: [string, string];
   icon?: keyof typeof Icons;
   label?: string;

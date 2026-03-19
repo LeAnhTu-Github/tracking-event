@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+import ReactQueryProvider from '@/providers/react-query-provider';
 import { ActiveThemeProvider } from '../themes/active-theme';
 
 export default function Providers({
@@ -10,10 +11,10 @@ export default function Providers({
   children: React.ReactNode;
 }) {
   return (
-    <>
+    <ReactQueryProvider>
       <ActiveThemeProvider initialTheme={activeThemeValue}>
         {children}
       </ActiveThemeProvider>
-    </>
+    </ReactQueryProvider>
   );
 }

@@ -36,9 +36,46 @@ export const navItems: NavItem[] = [
   {
     title: 'Dashboard',
     url: '/dashboard/overview',
+    group: 'overview',
     icon: 'dashboard',
     isActive: false,
     shortcut: ['d', 'd'],
+    items: []
+  },
+  {
+    title: 'Data Check',
+    url: '/dashboard/data-check',
+    group: 'overview',
+    icon: 'check',
+    isActive: false,
+    shortcut: ['e', 'v'],
+    items: []
+  },
+  {
+    title: 'Data Explorer',
+    url: '/dashboard/data-explorer',
+    group: 'overview',
+    icon: 'kanban',
+    isActive: false,
+    shortcut: ['d', 'x'],
+    items: []
+  },
+  {
+    title: 'Monitor',
+    url: '/dashboard/monitor',
+    group: 'system',
+    icon: 'warning',
+    isActive: false,
+    shortcut: ['m', 'n'],
+    items: []
+  },
+  {
+    title: 'Settings',
+    url: '/dashboard/settings',
+    group: 'system',
+    icon: 'settings',
+    isActive: false,
+    shortcut: ['s', 't'],
     items: []
   }
 ];
